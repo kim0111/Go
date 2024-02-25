@@ -1,7 +1,7 @@
-# Restaurants project
+# Apple stores project
 
 
-## Restaurants REST API
+## Stores REST API
 ```
 POST /menus
 GET /menus/:id
