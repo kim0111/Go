@@ -34,7 +34,7 @@ Table products {
 }
 
 // many-to-many
-Table restaurants_and_menu {
+Table stores_and_products {
   id bigserial [primary key]
   created_at timestamp
   updated_at timestamp
@@ -42,7 +42,7 @@ Table restaurants_and_menu {
   product bigserial
 }
 
-Ref: restaurants_and_menu.restaurant < restaurants.id
-Ref: restaurants_and_menu.menu < menu.id
+Ref: stores_and_products.store < stores.id
+Ref: stores_and_products.product < product.id
 
 ```
