@@ -12,26 +12,25 @@ DELETE /menus/:id
 ## DB Structure
 
 ```
-// Use DBML to define your database structure
-// Docs: https://dbml.dbdiagram.io/docs
-
-Table restaurants {
+Table stores {
   id bigserial [primary key]
   created_at timestamp
   updated_at timestamp
   title text
   coordinates text
   address text
-  cousine text
+  number_of_branches text
 }
 
-Table menu {
+Table products {
   id bigserial [primary key]
   created_at timestamp
   updated_at timestamp
   title text
   description text
-  nutrition_value text
+  for_what_country text
+  price text
+
 }
 
 // many-to-many
@@ -39,8 +38,8 @@ Table restaurants_and_menu {
   id bigserial [primary key]
   created_at timestamp
   updated_at timestamp
-  restaurant bigserial
-  menu bigserial
+  store bigserial
+  product bigserial
 }
 
 Ref: restaurants_and_menu.restaurant < restaurants.id
