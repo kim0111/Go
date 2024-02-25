@@ -3,10 +3,10 @@
 
 ## Stores REST API
 ```
-POST /menus
-GET /menus/:id
-PUT /menus/:id
-DELETE /menus/:id
+POST /products
+GET /products/:id
+PUT /products/:id
+DELETE /products/:id
 ```
 
 ## DB Structure
