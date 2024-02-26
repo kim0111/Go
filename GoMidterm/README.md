@@ -11,7 +11,8 @@ DELETE /products/:id
 
 ## DB Structure
 
-![image](https://github.com/kim0111/Go/assets/86676168/7c976f5d-e98a-4e9e-b51e-97b533d1c949)
+![image](https://github.com/kim0111/Go/assets/86676168/fd062bbc-8dea-49fe-bafb-83e2c2ab47b1)
+
 
 
 ```
