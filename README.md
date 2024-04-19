@@ -50,3 +50,28 @@ Ref: stores_and_products.store < stores.id
 Ref: stores_and_products.product < product.id
 
 ```
+
+## Some info
+```
+1)Create user: http://localhost:8081/api/v1/users
+{
+    "name": "Jona",
+    "email": "jona@gmail.com",
+    "password": "qwerty123"
+}
+
+2)User activation: http://localhost:8081/api/v1/users/activated
+{
+    "token": ""
+}
+
+3)User login: http://localhost:8081/api/v1/users/login
+{
+    "email": "jona@gmail.com",
+    "password": "qwerty123"
+}
+
+4)Delete product with permission: http://localhost:8081/api/v1/products/{id}
+key: Authorization
+value: Bearer {auth token}
+```
