@@ -1,3 +1,0 @@
-sorting - http://localhost:8081/api/v1/products?sort=-price
-pagination - http://localhost:8081/api/v1/products?page_size=2&page1
-filter - http://localhost:8081/api/v1/products?title=iPhone+5s
