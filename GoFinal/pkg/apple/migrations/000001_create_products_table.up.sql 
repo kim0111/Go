@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS stores
+(
+    id          bigserial PRIMARY KEY,
+    created_at  timestamp(0) with time zone NOT NULL DEFAULT NOW(),
+    updated_at  timestamp(0) with time zone NOT NULL DEFAULT NOW(),
+    title       text                        NOT NULL,
+    description text                        NOT NULL,
+    coordinates text                        NOT NULL,
+    address     text                        NOT NULL,
+    number_of_branches     int                        NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS products
+(
+    id              bigserial PRIMARY KEY,
+    created_at      timestamp(0) with time zone NOT NULL DEFAULT NOW(),
+    updated_at      timestamp(0) with time zone NOT NULL DEFAULT NOW(),
+    title           text                        NOT NULL,
+    description     text,
+    for_what_country text,
+    price int
+);
+
+CREATE TABLE IF NOT EXISTS stores_and_products
+(
+    "id"         bigserial PRIMARY KEY,
+    "created_at" timestamp(0) with time zone NOT NULL DEFAULT NOW(),
+    "updated_at" timestamp(0) with time zone NOT NULL DEFAULT NOW(),
+    "store" bigserial,
+    "product"       bigserial,
+    FOREIGN KEY (store)
+        REFERENCES stores(id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (product)
+        REFERENCES products(id)
+        ON DELETE CASCADE
+);
